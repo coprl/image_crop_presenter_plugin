@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Dennis Monsewicz"]
   spec.email         = ["dennismonsewicz@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A plugin to add image cropping to presenters"
+  spec.homepage      = "https://github.com/dennismonsewicz/image_crop_presenter_plugin"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
