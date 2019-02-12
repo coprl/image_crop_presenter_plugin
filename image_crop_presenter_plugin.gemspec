@@ -1,11 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "image_crop_presenter_plugin/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "image_crop_presenter_plugin"
-  spec.version       = ImageCropPresenterPlugin::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Dennis Monsewicz"]
   spec.email         = ["dennismonsewicz@gmail.com"]
 
