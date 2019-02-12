@@ -6,7 +6,7 @@ module Voom
       module ImageCrop
         module DSLComponents
           def image_crop(**attributes, &block)
-            self << ImageCrop::Component.new(parent: self, **attributes, &block)
+            self << ImageCrop::Component.new(**attributes, &block)
           end
 
           module WebClientComponents
