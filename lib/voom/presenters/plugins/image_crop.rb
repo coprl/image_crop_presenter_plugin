@@ -5,7 +5,7 @@ module Voom
     module Plugins
       module ImageCrop
         module DSLComponents
-          def image_cropper(**attributes, &block)
+          def image_crop(**attributes, &block)
             self << ImageCrop::Component.new(parent: self, **attributes, &block)
           end
 
