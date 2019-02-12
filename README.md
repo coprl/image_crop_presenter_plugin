@@ -20,15 +20,15 @@ Or install it yourself as:
 
     $ gem install image_crop_presenter_plugin
 
-## Usage
+## Demo
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+1. Fork or clone [http://github.com/rx/presenters](http://github.com/rx/presenters)
+2. `cd presenters` (project root)
+3. Add `gem 'image_crop_presenter_plugin'` to its Gemfile.
+4. `bundle install`
+5. Copy this repo's `/demo/image_crop.pom` into presenters' `/app/plugins/` directory.
+6. `rackup`
+7. `open http://localhost:9292/plugins/forte`
 
 ## Contributing
 
