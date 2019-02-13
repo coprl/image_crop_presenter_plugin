@@ -8,12 +8,14 @@
 
   class ImageCrop {
     constructor() {
+      console.log('constructor for ImageCrop');
       this.element = document.querySelector('.v-image-crop');
       this.image = this.element.querySelector('img');
       this.handleCropEnd = this.handleCropEnd.bind(this);
     }
 
     run() {
+      console.log('setting up ImageCrop');
       this.setupCroppr();
     }
 
