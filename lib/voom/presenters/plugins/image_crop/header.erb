@@ -5,22 +5,36 @@
 <script type="text/javascript">
   class ImageCrop {
     constructor(element) {
-      console.log('ImageCrop');
-      this.element = element;
-      this.image = this.element.querySelector('img');
-      this.handleCropEnd = this.handleCropEnd.bind(this);
-      this.data = JSON.parse(element.dataset.cropData);
-      this.setupCroppr();
-    }
-
-    setupCroppr() {
+      // if Croppr doesn't load for whatever reason, never setup JS plugin
       if (typeof Croppr !== 'function') {
         return;
       }
 
-      this.croppr = new Croppr(this.image, {
-        onCropEnd: this.handleCropEnd,
+      console.log('ImageCrop');
+
+      this.element = element;
+      this.image = this.element.querySelector('img');
+
+      this.dataSet = this.element.dataset;
+      this.handleCropEnd = this.handleCropEnd.bind(this);
+      this.data = {};
+
+      this.setupCropOptions();
+      this.setupCroppr();
+    }
+
+    setupCropOptions() {
+      const { pluginCallback, ...opts } = this.dataSet;
+
+      const data = {};
+      Object.keys(opts).forEach(function(k) {
+        data[k] = Number(opts[k]) || opts[k];
       });
+      this.cropprOptions = {onCropEnd: this.handleCropEnd, ...data};
+    }
+
+    setupCroppr() {
+      this.croppr = new Croppr(this.image, this.cropprOptions);
     }
 
     handleCropEnd(data) {
