@@ -1,5 +1,4 @@
-<% plugin_data = comp.default_component_data.collect { |k,v| "#{k}=#{v}" } %>
-<div id="<%= comp.id %>" class='v-plugin v-input' data-plugin-callback="ImageCrop" <%= plugin_data.join(" ") %>>
+<div id="<%= comp.id %>" class='v-plugin v-input' data-plugin-callback="ImageCrop" data-aspect-ratio="<%= comp.aspect_ratio %>" data-max-width="<%= comp.max_width %>" data-min-width="<%= comp.min_width %>" data-max-height="<%= comp.max_height %>" data-min-height="<%= comp.min_height %>" data-size-unit="<%= comp.size_unit %>">
   <%= erb :"components/event", :locals => {comp: comp, events: comp.events, parent_id: comp.id} %>
   <img src="<%= comp.url %>" height="<%= comp.height %>" width="<%= comp.width %>" border="0" alt="" />
 </div>

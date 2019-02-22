@@ -17,17 +17,6 @@ module Voom
             @min_height = attribs.delete(:min_height)
             @size_unit = attribs.delete(:size_unit)
           end
-
-          def default_component_data
-            {
-              "data-aspect-ratio": aspect_ratio,
-              "data-max-width": max_width,
-              "data-max-height": max_height,
-              "data-min-width": min_width,
-              "data-min-height": min_height,
-              "data-size-unit": size_unit
-            }.compact
-          end
         end
       end
     end
