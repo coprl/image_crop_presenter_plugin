@@ -1,20 +1,41 @@
-# ImageCropPresenterPlugin
-A plugin for [presenters](http://github.com/rx/presenters) to crop images
+# Image Crop Presenter Plugin
 
-## Demo
-1. Fork or clone [http://github.com/rx/presenters](http://github.com/rx/presenters)
-2. `cd presenters` (project root)
-2. `git checkout rx-plugins` (temporarily)
-3. Add `gem 'image_crop_presenter_plugin'` to its Gemfile.
-4. `bundle install`
-5. Copy this repo's `/demo/image_crop.pom` into presenters' `/app/demo/plugins/` directory. 
-7. `bundle exec rackup`
-8. `open http://localhost:9292/plugins/image_crop`
+A plugin for [COPRL](http://github.com/coprl/presenters) to crop images.
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'image_crop_presenter_plugin', git: 'https://github.com/coprl/image_crop_presenter_plugin', require: false
+```
+
+And then execute:
+
+    $ bundle
+
+## Usage
+
+Example POM:
+
+    plugin :image_crop
+
+    image_crop image: 'https://cdn.mos.cms.futurecdn.net/4f6d31c116fdada59a5cb16d136e3068-970-80.jpg' do
+      event :change do
+        # handle the change event here
+      end
+    end
+
+Use the [DEMO](https://coprl-ruby.herokuapp.com/plugins/image_crop) and view source or to get started with more examples.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/image_crop_presenter_plugin.
+Bug reports and pull requests are welcome on GitHub at https://github.com/coprl/chart_presenter_plugin.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the COPRL project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/coprl/coprl/blob/master/CODE-OF-CONDUCT.md).
