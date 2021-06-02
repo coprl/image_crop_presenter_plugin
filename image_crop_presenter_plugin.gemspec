@@ -1,15 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "image_crop_presenter_plugin/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "image_crop_presenter_plugin"
-  spec.version       = "0.1.0"
-  spec.authors       = ["Dennis Monsewicz"]
-  spec.email         = ["dennismonsewicz@gmail.com"]
+  spec.version       = ImageCropPresenterPlugin::VERSION
+  spec.authors       = ["Dennis Monsewicz", "Russell Edens"]
+  spec.email         = ["dennismonsewicz@gmail.com", "russell@voomify.com"]
 
   spec.summary       = "A plugin to add image cropping to presenters"
-  spec.homepage      = "https://github.com/dennismonsewicz/image_crop_presenter_plugin"
+  spec.homepage      = "https://github.com/coprl/image_crop_presenter_plugin"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
