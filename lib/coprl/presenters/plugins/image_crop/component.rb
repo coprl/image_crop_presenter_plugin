@@ -1,6 +1,6 @@
-require 'voom/presenters/dsl/components/image'
+require 'coprl/presenters/dsl/components/image'
 
-module Voom
+module Coprl
   module Presenters
     module Plugins
       module ImageCrop
