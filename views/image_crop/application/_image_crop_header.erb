@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/croppr@2.3.1/dist/croppr.min.js"></script>
 <style>
-  <%= File.read(File.expand_path('cropper.css', __dir__)  ) %>
+  <%= raw File.read(File.expand_path('../cropper.css', __dir__)  ) %>
 </style>
 <script type="text/javascript">
-  <%= File.read(File.expand_path('cropper.js', __dir__)  ) %>
+  <%= raw File.read(File.expand_path('../cropper.js', __dir__)  ) %>
 </script>
