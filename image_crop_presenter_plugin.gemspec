@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Dennis Monsewicz", "Russell Edens"]
   spec.email         = ["dennismonsewicz@gmail.com", "russell@voomify.com"]
 
-  spec.summary       = "A plugin to add image cropping to presenters"
+  spec.summary       = "A COPRL presenters plugin for image cropping"
   spec.homepage      = "https://github.com/coprl/image_crop_presenter_plugin"
   spec.license       = "MIT"
 
