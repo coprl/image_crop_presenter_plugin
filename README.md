@@ -1,6 +1,6 @@
 # Image Crop Presenter Plugin
 
-A plugin for [COPRL](http://github.com/coprl/presenters) to crop images.
+A [COPRL](http://github.com/coprl/coprl) presenter plugin to crop images.
 
 ## Installation
 
